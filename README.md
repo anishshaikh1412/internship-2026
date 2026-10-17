@@ -2,7 +2,7 @@
 <!--                    🚀 FULLSTACK INTERNSHIP — ERP 🚀                     -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<div align="center"> 
+<div align="center">  
  
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Fullstack%20Internship&fontSize=60&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=ERP%20System%20for%20Daily%20Learning&descAlignY=55&descSize=18" width="100%" />
 
