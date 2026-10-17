@@ -1,0 +1,32 @@
+Day 1.3 - Review Questions and Answers
+
+1. What is a function?
+A function is a reusable block of code designed to
+perform a specific task.
+
+2. Difference between parameters and arguments?
+Parameters are variables in function signature.
+Arguments are actual values passed when calling.
+
+3. return vs console.log()?
+return sends value back to caller.
+console.log() displays value in console.
+
+4. Function with no explicit return?
+Returns undefined.
+
+5. Function declaration vs function expression?
+Declaration is hoisted; expression assigned to const
+cannot be called before initialization.
+
+6. What is an arrow function?
+Concise syntax using =>. No own this/arguments.
+
+7. Why is input validation important?
+Prevents invalid data from producing incorrect results.
+
+8. Why should functions return values for calculations?
+Returned values can be stored, reused, tested, and passed.
+
+9. Why should original data not be modified?
+Avoids side effects, easier debugging and testing.

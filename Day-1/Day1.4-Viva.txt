@@ -1,0 +1,33 @@
+Day 1.4 — Section 6: Viva Questions and Answers
+
+1. var vs let vs const?
+   var = function-scoped, hoisted (undefined).
+   let = block-scoped, TDZ.
+   const = block-scoped, TDZ, no reassignment (object mutable).
+
+2. What is scope?
+   Jahan tak variable accessible hai. Global, function, block.
+
+3. What is hoisting?
+   Declarations memory mein upar utha li jaati hain. var = undefined, let/const = TDZ.
+
+4. What is Temporal Dead Zone?
+   let/const declaration se pehle access karne pe ReferenceError.
+
+5. What is an execution context?
+   Environment jisme code run hota hai: Variable Env + Scope Chain + this.
+
+6. What is call stack?
+   LIFO stack jo active function calls track karta hai.
+
+7. Parameter vs Argument?
+   Parameter = function signature mein. Argument = call karte waqt value.
+
+8. return vs console.log?
+   return = caller ko value. console.log = sirf print.
+
+9. Why functions?
+   Reusability, modularity, testing.
+
+10. How to debug ReferenceError?
+    Check: declared? sahi scope? TDZ? spelling?

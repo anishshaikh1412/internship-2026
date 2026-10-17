@@ -1,0 +1,131 @@
+#=========================================#
+#            Learning Objectives          #
+#=========================================#
+
+1. Understand JavaScript Execution.
+   - A JavaScript file usually has the `.js` file extension.
+   - JavaScript code is executed by a JavaScript engine, such as V8, which is used by Node.js and Google Chrome.
+
+2. Use `var`, `let`, and `const`.
+   - These three keywords are mainly used to declare variables in JavaScript.
+
+   a. `var`
+   - The `var` keyword is used to declare variables that can be reassigned and redeclared. It is function-scoped.
+   - Example:
+     ```javascript
+     var name = "Tanvir";
+     var name = "Rahul"; // Redeclaration allowed
+     name = "Amit";      // Reassignment allowed
+
+     console.log(name); // Amit
+     ```
+
+   b. `let`
+   - The `let` keyword declares a variable that can be reassigned but cannot be redeclared in the same scope. It is block-scoped.
+   - Example:
+     ```javascript
+     let age = 20;
+     age = 22; // Reassignment allowed
+
+     console.log(age); // 22
+     ```
+
+   c. `const`
+   - The `const` keyword declares a variable that must be initialized when declared and cannot be reassigned. It is block-scoped.
+   - Example:
+     ```javascript
+     const country = "India";
+
+     console.log(country); // India
+     // country = "USA"; // TypeError: Assignment to constant variable
+     ```
+
+3. Explain Global, Function, and Block Scope.
+   - Scope determines where a variable can be accessed in a JavaScript program.
+
+   a. Global Scope
+   - A variable declared in the global scope can be accessed from different parts of the program, subject to the environment and declaration rules.
+   - Example:
+     ```javascript
+     let name = "Tanvir";
+
+     function greet() {
+         console.log(name);
+     }
+
+     greet(); // Tanvir
+     ```
+
+   b. Function Scope
+   - A variable declared using `var` inside a function is accessible only within that function.
+   - Example:
+     ```javascript
+     function showMessage() {
+         var message = "Hello World";
+         console.log(message);
+     }
+
+     showMessage(); // Hello World
+     // console.log(message); // ReferenceError
+     ```
+
+   c. Block Scope
+   - Variables declared using `let` and `const` inside a block `{}` can only be accessed within that block.
+   - Example:
+     ```javascript
+     if (true) {
+         let age = 20;
+         const country = "India";
+
+         console.log(age);     // 20
+         console.log(country); // India
+     }
+
+     // console.log(age);     // ReferenceError
+     // console.log(country); // ReferenceError
+     ```
+
+4. Understand Variable Shadowing.
+   - Variable shadowing occurs when a variable declared in an inner scope has the same name as a variable in an outer scope. The inner variable takes precedence within its scope.
+   - Example:
+     ```javascript
+     let name = "Tanvir";
+
+     function displayName() {
+         let name = "Rahul";
+         console.log(name); // Rahul
+     }
+
+     displayName();
+     console.log(name); // Tanvir
+     ```
+
+5. Identify Common Scope-Related Errors.
+   - Scope-related errors occur when a variable is accessed outside its scope, redeclared incorrectly, or accessed before initialization.
+
+   a. ReferenceError: Accessing a block-scoped variable outside its block.
+   ```javascript
+   if (true) {
+       let age = 20;
+   }
+
+   // console.log(age); // ReferenceError
+   ```
+
+   b. SyntaxError: Redeclaring a `let` variable in the same scope.
+   ```javascript
+   let score = 90;
+   // let score = 95; // SyntaxError
+   ```
+
+   c. ReferenceError: Accessing a `let` variable before initialization.
+   ```javascript
+   // console.log(age); // ReferenceError
+   let age = 20;
+   ```
+
+   d. TypeError: Reassigning a `const` variable.
+   ```javascript
+   const country = "India";
+   // country = "USA"; // TypeError
+   ```

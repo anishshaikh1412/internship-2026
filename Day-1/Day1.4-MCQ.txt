@@ -1,0 +1,12 @@
+Day 1.4 — Section 1: MCQ Answers
+
+Q1.  B — let (block-scoped, reassignable)
+Q2.  C — undefined (var hoisting: declaration upar, value nahi)
+Q3.  C — ReferenceError (Temporal Dead Zone)
+Q4.  A — a only (var function-scoped, let block-scoped)
+Q5.  B — Returns a value to the caller
+Q6.  B — 8
+Q7.  A — Function declaration (hoisted)
+Q8.  B — Active function calls
+Q9.  B — 90 (const object ki property mutate ho sakti hai)
+Q10. C — undefined

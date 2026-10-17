@@ -1,0 +1,147 @@
+=========================================
+       DAY 1.1 - REVIEW QUESTIONS
+=========================================
+
+1. What is a variable?
+
+A variable is a named identifier used to store or reference a value in a JavaScript program. Variables allow us to access and work with data in our code.
+
+Example:
+
+let age = 20;
+const name = "Tanvir";
+
+console.log(name);
+console.log(age);
+
+Output:
+Tanvir
+20
+
+
+2. What is the difference between let and const?
+
+The let keyword declares a block-scoped variable that can be reassigned. The const keyword declares a block-scoped binding that cannot be reassigned and must be initialized when declared.
+
+Example:
+
+let age = 20;
+age = 21; // Allowed
+
+const country = "India";
+// country = "USA"; // TypeError
+
+Use let when reassignment is required and const when the variable binding should not be reassigned.
+
+
+3. What is the difference between function scope and block scope?
+
+Function scope means a variable declared with var inside a function is accessible throughout that function.
+
+Block scope means a variable declared with let or const is accessible only within the block where it is declared.
+
+Example:
+
+function example() {
+    var first = 10;
+
+    if (true) {
+        let second = 20;
+        console.log(second);
+    }
+
+    console.log(first);
+    // console.log(second); // ReferenceError
+}
+
+example();
+
+Output:
+20
+10
+
+
+4. Why is var generally avoided in modern JavaScript?
+
+The var keyword is generally avoided because it is function-scoped, allows redeclaration in the same scope, and can cause unexpected behavior inside conditional blocks and loops.
+
+Example:
+
+if (true) {
+    var score = 100;
+}
+
+console.log(score); // 100
+
+Using let and const provides more predictable scope management and helps prevent accidental redeclarations.
+
+
+5. Does const make an object immutable?
+
+No, const does not make an object immutable. It prevents reassignment of the variable binding, but the object's properties can still be modified.
+
+Example:
+
+const student = {
+    name: "Tanvir",
+    marks: 80
+};
+
+student.marks = 95;
+
+console.log(student.marks); // 95
+
+// student = {}; // TypeError
+
+Object.freeze() can prevent modification of an object's own properties, but it provides only shallow freezing by default.
+
+
+6. What is variable shadowing?
+
+Variable shadowing occurs when a variable declared inside an inner scope has the same name as a variable declared in an outer scope. The inner variable takes precedence within its scope.
+
+Example:
+
+const marks = 80;
+
+function showMarks() {
+    const marks = 95;
+    console.log(marks);
+}
+
+showMarks();
+console.log(marks);
+
+Output:
+95
+80
+
+The inner variable does not modify the outer variable because they are separate bindings.
+
+
+7. Why should variables be declared in the smallest appropriate scope?
+
+Variables should be declared in the smallest appropriate scope to improve readability, reduce unintended access and modification, prevent naming conflicts, and make debugging and maintenance easier.
+
+Example:
+
+function calculateTotal(price, quantity) {
+    const total = price * quantity;
+    return total;
+}
+
+console.log(calculateTotal(500, 3));
+
+Output:
+1500
+
+The total variable is declared inside the function because it is needed only for that calculation. This keeps temporary data within its required scope.
+
+
+=========================================
+                 CONCLUSION
+=========================================
+
+Understanding variables and scope helps developers write predictable, maintainable, and reliable JavaScript code.
+
+Modern JavaScript generally recommends using const by default, let when reassignment is required, and avoiding var in most application code.
